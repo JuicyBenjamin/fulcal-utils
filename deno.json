@@ -1,7 +1,7 @@
 {
   "name": "@juicybenjamin/fulcal-utils",
   "version": "0.0.1",
-  "exports": "./mod.ts",
+  "exports": "./main.ts",
   "tasks": {
     "dev": "deno run --watch main.ts"
   },
