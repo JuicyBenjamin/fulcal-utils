@@ -19,6 +19,13 @@ type TUseFullCalendar = {
 
 const defaultId = 'default'
 
+/**
+  * useFullCalendar is a zustand hook that allows you to manage multiple FullCalendar instances.
+  * the setCalendar should be used to store a reference to the FullCalendar instance. An Id can be provided to store multiple instances.
+  * getApi can be used to get the CalendarApi of a specific instance.
+  * setTitle can be used to store the title of a specific instance.
+  * getTitle can be used to get the title of a specific instance. Will default to the FullCalendar title if not set.
+*/
 export const useFullCalendar = create<TUseFullCalendar>((set, get) => ({
   calendars: {},
 
