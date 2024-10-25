@@ -1,10 +1,10 @@
-import type { CalendarApi } from 'npm:@fullcalendar/core'
-import type FullCalendar from 'npm:@fullcalendar/react'
+import type { CalendarApi } from 'npm:@fullcalendar/core@6.1.15'
+import type FullCalendar from 'npm:@fullcalendar/react@6.1.15'
 import {
   create,
   type UseBoundStore,
   type StoreApi
-} from 'npm:zustand'
+} from 'npm:zustand@5.0.0'
 
 type TUseFullCalendar = {
   calendars: Record<string, FullCalendar>
