@@ -1,6 +1,10 @@
 import type { CalendarApi } from 'npm:@fullcalendar/core'
 import type FullCalendar from 'npm:@fullcalendar/react'
-import { create } from 'npm:zustand'
+import {
+  create,
+  type UseBoundStore,
+  type StoreApi
+} from 'npm:zustand'
 
 type TUseFullCalendar = {
   calendars: Record<string, FullCalendar>
@@ -26,7 +30,7 @@ const defaultId = 'default'
   * setTitle can be used to store the title of a specific instance.
   * getTitle can be used to get the title of a specific instance. Will default to the FullCalendar title if not set.
 */
-export const useFullCalendar = create<TUseFullCalendar>((set, get) => ({
+export const useFullCalendar: UseBoundStore<StoreApi<TUseFullCalendar>> = create<TUseFullCalendar>((set, get) => ({
   calendars: {},
 
   setCalendar: ({ id = defaultId, calendar }) =>
